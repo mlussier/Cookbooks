@@ -21,5 +21,13 @@ execute "chmod" do
   command "chmod +x /home/ubuntu/stempremier-1.0-SNAPSHOT/start"
   user "ubuntu"
 end
+
+execute "kill" do
+  command "sudo pkill java &"
+end
+
+execute "start" do
+  command "sudo /home/ubuntu/stempremier-1.0-SNAPSHOT/start -Dhttp.port=80 &" 
+end
 Chef::Log.info "*** End Stempremier deployment ***"
 
