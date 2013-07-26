@@ -1,6 +1,6 @@
 #
 # include_recipe "Chef::Log"
-Chef::Log.info "This is a console test to see if it works"
+Chef::Log.info "*** Begin Stempremier deployment ***"
 #directory "/home/ubuntu/STEMPremier" do
 #  owner "root"
 #  group "root"
@@ -17,5 +17,9 @@ execute "unzip" do
   command "unzip -xo /home/ubuntu/stem.zip -d /home/ubuntu/." 
   user "ubuntu"
 end
-
+execute "chmod" do
+  command "chmod +x /home/ubuntu/stempremier-1.0-SNAPSHOT/start"
+  user "ubuntu"
+end
+Chef::Log.info "*** End Stempremier deployment ***"
 
