@@ -14,7 +14,8 @@ remote_file "/home/ubuntu/stem.zip" do
 end
 
 execute "unzip" do
-  command "unzip -x /home/ubuntu/stem.zip -d /home/ubuntu/." 
+  command "unzip -xo /home/ubuntu/stem.zip -d /home/ubuntu/." 
+  user "ubuntu"
 end
 
 
