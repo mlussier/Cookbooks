@@ -10,11 +10,11 @@ Chef::Log.info "This is a console test to see if it works"
 
 remote_file "/home/ubuntu/stem.zip" do
   source "https://s3.amazonaws.com/stempremier.com/stem.zip"
-  mode 00755
+  mode 00777
 end
 
 execute "unzip" do
-  command "unzip -x /home/ubuntu/stem.zip"
+  command "unzip -x /home/ubuntu/stem.zip /home/ubuntu/." 
 end
 
 
