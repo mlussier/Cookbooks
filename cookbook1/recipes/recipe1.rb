@@ -14,7 +14,7 @@ remote_file "/home/ubuntu/stem.zip" do
 end
 
 execute "unzip" do
-  command "sudo nzip -xo /home/ubuntu/stem.zip -d /home/ubuntu/." 
+  command "sudo unzip -xo /home/ubuntu/stem.zip -d /home/ubuntu/." 
   user "ubuntu"
 end
 execute "chmod" do
