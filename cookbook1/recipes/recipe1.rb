@@ -14,11 +14,11 @@ remote_file "/home/ubuntu/stem.zip" do
 end
 
 execute "unzip" do
-  command "unzip -xo /home/ubuntu/stem.zip -d /home/ubuntu/." 
+  command "sudo nzip -xo /home/ubuntu/stem.zip -d /home/ubuntu/." 
   user "ubuntu"
 end
 execute "chmod" do
-  command "chmod +x /home/ubuntu/stempremier-1.0-SNAPSHOT/start"
+  command "sudo chmod +x /home/ubuntu/stempremier-1.0-SNAPSHOT/start"
   user "ubuntu"
 end
 
