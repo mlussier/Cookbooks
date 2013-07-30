@@ -8,6 +8,11 @@ Chef::Log.info "*** Begin Stempremier deployment ***"
 #  action :create
 # end
 
+execute "delete" do
+  command "sudo rm -f stem.zip"
+  sudo "ubuntu"
+end
+
 remote_file "/home/ubuntu/stem.zip" do
   source "https://s3.amazonaws.com/stempremier.com/stem.zip"
   mode 00777
