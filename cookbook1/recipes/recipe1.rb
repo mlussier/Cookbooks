@@ -27,7 +27,7 @@ execute "kill" do
 end
 
 execute "start" do
-  command "sudo /home/ubuntu/stempremier-1.0-SNAPSHOT/start -Dhttp.port=80 &" 
+  command "sudo /home/ubuntu/stempremier-1.0-SNAPSHOT/start -Dhttp.port=80 > /home/ubuntu/stempremier-1.0-SNAPSHOT/logfile &" 
 end
 Chef::Log.info "*** End Stempremier deployment ***"
 
