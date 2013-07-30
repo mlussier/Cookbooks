@@ -13,7 +13,7 @@ execute "delete" do
   user "ubuntu"
 end
 
-execute "removeRUNNINGPID"
+execute "removeRUNNINGPID" do
   command "sudo rm -f /home/ubuntu/stempremier-1.0-SNAPSHOT/RUNNING_PID"
   user "ubuntu"
 end
