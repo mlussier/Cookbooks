@@ -9,8 +9,13 @@ Chef::Log.info "*** Begin Stempremier deployment ***"
 # end
 
 execute "delete" do
-  command "sudo rm -f stem.zip"
-  sudo "ubuntu"
+  command "sudo rm -f /home/ubuntu/stem.zip"
+  user "ubuntu"
+end
+
+execute "removeRUNNINGPID"
+  command "sudo rm -f /home/ubuntu/stempremier-1.0-SNAPSHOT/RUNNING_PID"
+  user "ubuntu"
 end
 
 remote_file "/home/ubuntu/stem.zip" do
